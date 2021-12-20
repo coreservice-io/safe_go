@@ -19,23 +19,35 @@ func (p *SomePointer) Run() {
 }
 
 func main() {
-	USafeGo.Go(func(args ...interface{}) {
-		log.Println("go start")
-		log.Println(divide(2, 1))
-		log.Println(divide(2, 0))
-	}, func(err interface{}) {
-		log.Println("panic catch")
-		log.Println(err)
-	})
+	//USafeGo.Go(func(args ...interface{}) {
+	//	log.Println("go start")
+	//	log.Println(divide(2, 1))
+	//	log.Println(divide(2, 0))
+	//}, func(err interface{}) {
+	//	log.Println("panic catch")
+	//	log.Println(err)
+	//})
+	//
+	//USafeGo.Go(func(args ...interface{}) {
+	//	var p *SomePointer
+	//	//nil
+	//	p.Run()
+	//}, func(err interface{}) {
+	//	log.Println("panic catch")
+	//	log.Println(err)
+	//})
 
-	USafeGo.Go(func(args ...interface{}) {
-		var p *SomePointer
-		//nil
-		p.Run()
-	}, func(err interface{}) {
-		log.Println("panic catch")
-		log.Println(err)
-	})
+	count := 0
 
-	time.Sleep(5 * time.Second)
+	USafeGo.GoInfiniteLoop(func() {
+		count++
+		log.Println(count)
+		if count%3 == 0 {
+			divide(3, 0)
+		}
+	}, func(err interface{}) {
+		log.Println(err)
+	}, 3, 5)
+
+	time.Sleep(600 * time.Second)
 }
