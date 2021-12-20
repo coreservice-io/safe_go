@@ -40,12 +40,16 @@ func main() {
 
 	//infinite loop
 	count := 0
-	USafeGo.GoInfiniteLoop(func() {
+	USafeGo.GoInfiniteLoop(func() bool {
 		count++
 		log.Println(count)
 		if count%3 == 0 {
 			divide(3, 0)
 		}
+		if count > 6 {
+			return false
+		}
+		return true
 	}, func(err interface{}) {
 		log.Println(err)
 	}, 3, 5)
