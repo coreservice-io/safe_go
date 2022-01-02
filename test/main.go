@@ -12,7 +12,6 @@ func divide(a, b int) int {
 }
 
 func main() {
-	//use USafeGo package
 	USafeGo.Go(
 		// process
 		func(args ...interface{}) {

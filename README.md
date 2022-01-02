@@ -1,5 +1,5 @@
 # USafeGo
-use this package to replace golang build-in goroutine to prevent the program crash from unexpected panic
+### use this package to replace golang build-in goroutine to prevent the program crash from unexpected panic
 
 ### example
 ```go
@@ -15,7 +15,6 @@ func divide(a, b int) int {
 }
 
 func main() {
-	//use USafeGo package
 	USafeGo.Go(
 		// process
 		func(args ...interface{}) {
