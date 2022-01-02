@@ -1,11 +1,5 @@
 # USafeGo
-
 use this package to replace golang build-in goroutine to prevent the program crash from unexpected panic
-
-### how to use
-```go
-import "github.com/universe-30/USafeGo"
-```
 
 ### example
 ```go
