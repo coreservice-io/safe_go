@@ -4,7 +4,7 @@ import (
 	"log"
 	"time"
 
-	"github.com/universe-30/USafeGo"
+	"github.com/coreservice-io/USafeGo"
 )
 
 func divide(a, b int) int {

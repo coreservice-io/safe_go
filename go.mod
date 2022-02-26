@@ -1,3 +1,3 @@
-module github.com/universe-30/USafeGo
+module github.com/coreservice-io/USafeGo
 
 go 1.17
