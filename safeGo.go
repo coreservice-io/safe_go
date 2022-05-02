@@ -1,4 +1,4 @@
-package USafeGo
+package safe_go
 
 func Go(function func(args ...interface{}), onPanic func(panic interface{}), args ...interface{}) {
 	go func() {

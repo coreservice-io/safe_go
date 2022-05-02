@@ -1,3 +1,3 @@
-module github.com/coreservice-io/USafeGo
+module github.com/coreservice-io/safe_go
 
 go 1.17

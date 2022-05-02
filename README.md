@@ -1,4 +1,4 @@
-# USafeGo
+# safe_go
 ### use this package to replace golang build-in goroutine to prevent the program crash from unexpected panic
 
 ### example
@@ -7,7 +7,7 @@ import (
 	"log"
 	"time"
 
-	"github.com/coreservice-io/USafeGo"
+	"github.com/coreservice-io/safe_go"
 )
 
 func divide(a, b int) int {
@@ -15,7 +15,7 @@ func divide(a, b int) int {
 }
 
 func main() {
-	USafeGo.Go(
+	safe_go.Go(
 		// process
 		func(args ...interface{}) {
 			log.Println("go start")

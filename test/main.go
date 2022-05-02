@@ -4,7 +4,7 @@ import (
 	"log"
 	"time"
 
-	"github.com/coreservice-io/USafeGo"
+	"github.com/coreservice-io/safe_go"
 )
 
 func divide(a, b int) int {
@@ -12,7 +12,7 @@ func divide(a, b int) int {
 }
 
 func main() {
-	USafeGo.Go(
+	safe_go.Go(
 		// process
 		func(args ...interface{}) {
 			log.Println("go start")
